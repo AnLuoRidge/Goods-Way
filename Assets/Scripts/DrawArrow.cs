@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class DrawArrow : MonoBehaviour
 {
-    public GameObject first;
-    public GameObject second;
-    public PhasorScript phasorScript;
+    private PhasorScript phasorScript;
 
     private void Start()
     {
@@ -14,13 +12,14 @@ public class DrawArrow : MonoBehaviour
 
     void Update()
     {
-        if (first != null && second != null)
+        GameObject[] array = ImageTargetManager.Instance.ITOnScreen;
+        foreach (GameObject target in array)
         {
-            if (first.activeSelf && second.activeSelf)
+            GameObject nextTarget = PathManager.Instance.GetNextTarget(target);
+            if (nextTarget != null)
             {
-                phasorScript.Source = first;
-                
-                phasorScript.Fire(second.transform.position);
+                phasorScript.Source = target;
+                phasorScript.Fire(nextTarget.transform.position);
             }
         }
     }

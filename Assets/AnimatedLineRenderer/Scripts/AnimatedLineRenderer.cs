@@ -8,7 +8,8 @@ namespace DigitalRuby.AnimatedLineRenderer
     [RequireComponent(typeof(LineRenderer))]
     public class AnimatedLineRenderer : MonoBehaviour
     {
-        [Tooltip("The minimum distance that must be in between line segments (0 for infinite). Attempts to make lines with distances smaller than this will fail.")]
+        [Tooltip(
+            "The minimum distance that must be in between line segments (0 for infinite). Attempts to make lines with distances smaller than this will fail.")]
         public float MinimumDistance = 0.0f;
 
         [Tooltip("Seconds that each new line segment should animate with")]
@@ -20,17 +21,13 @@ namespace DigitalRuby.AnimatedLineRenderer
         [Tooltip("End color for the line renderer since Unity does not provide a getter for this")]
         public Color EndColor = Color.white;
 
-        [Tooltip("Start line width")]
-        public float StartWidth = 2.0f;
+        [Tooltip("Start line width")] public float StartWidth = 2.0f;
 
-        [Tooltip("End line width")]
-        public float EndWidth = 2.0f;
+        [Tooltip("End line width")] public float EndWidth = 2.0f;
 
-        [Tooltip("Sort layer name")]
-        public string SortLayerName = "Default";
+        [Tooltip("Sort layer name")] public string SortLayerName = "Default";
 
-        [Tooltip("Order in sort layer")]
-        public int OrderInSortLayer = 1;
+        [Tooltip("Order in sort layer")] public int OrderInSortLayer = 1;
 
         private struct QueueItem
         {
@@ -62,7 +59,7 @@ namespace DigitalRuby.AnimatedLineRenderer
                     current = queue.Dequeue();
                     if (++index == 0)
                     {
-                        lineRenderer.SetVertexCount(1);
+                        lineRenderer.positionCount = 1;
                         StartPoint = current.Position;
                         current.ElapsedSeconds = current.TotalSeconds = current.TotalSecondsInverse = 0.0f;
                         lineRenderer.SetPosition(0, current.Position);
@@ -70,7 +67,7 @@ namespace DigitalRuby.AnimatedLineRenderer
                     }
                     else
                     {
-                        lineRenderer.SetVertexCount(index + 1);
+                        lineRenderer.positionCount = index + 1;
                     }
                 }
             }
@@ -86,6 +83,7 @@ namespace DigitalRuby.AnimatedLineRenderer
                 remainder = 0.0f;
                 current.ElapsedSeconds = newElapsedSeconds;
             }
+
             current.ElapsedSeconds = Mathf.Min(current.TotalSeconds, current.ElapsedSeconds + Time.deltaTime);
             float lerp = current.TotalSecondsInverse * current.ElapsedSeconds;
             EndPoint = Vector3.Lerp(prev.Position, current.Position, lerp);
@@ -95,7 +93,7 @@ namespace DigitalRuby.AnimatedLineRenderer
         private void Start()
         {
             lineRenderer = GetComponent<LineRenderer>();
-            lineRenderer.SetVertexCount(0);
+            lineRenderer.positionCount = 0;
         }
 
         private void Update()
@@ -103,8 +101,10 @@ namespace DigitalRuby.AnimatedLineRenderer
             ProcessCurrent();
             if (!Resetting)
             {
-                lineRenderer.SetColors(StartColor, EndColor);
-                lineRenderer.SetWidth(StartWidth, EndWidth);
+                lineRenderer.startColor = StartColor;
+                lineRenderer.endColor = EndColor;
+                lineRenderer.startWidth = StartWidth;
+                lineRenderer.endWidth = EndWidth;
                 lineRenderer.sortingLayerName = SortLayerName;
                 lineRenderer.sortingOrder = OrderInSortLayer;
             }
@@ -119,6 +119,7 @@ namespace DigitalRuby.AnimatedLineRenderer
                 {
                     callback();
                 }
+
                 yield break;
             }
 
@@ -133,9 +134,11 @@ namespace DigitalRuby.AnimatedLineRenderer
                 elapsedSeconds += Time.deltaTime;
                 c1.a = a;
                 c2.a = a;
-                lineRenderer.SetColors(c1, c2);
+                lineRenderer.startColor = c1;
+                lineRenderer.endColor = c1;
                 yield return new WaitForSeconds(0.01f);
             }
+
             Reset();
             if (callback != null)
             {
@@ -203,8 +206,9 @@ namespace DigitalRuby.AnimatedLineRenderer
             lastQueued = null;
             if (lineRenderer != null)
             {
-                lineRenderer.SetVertexCount(0);
+                lineRenderer.positionCount = 0;
             }
+
             remainder = 0.0f;
             queue.Clear();
             Resetting = false;
@@ -246,13 +250,17 @@ namespace DigitalRuby.AnimatedLineRenderer
                     lineRenderer.SetPosition(index, endPoint.Value);
                 }
             }
+
             StartCoroutine(ResetAfterSecondsInternal(seconds, callback));
         }
 
         /// <summary>
         /// The Unity Line Renderer
         /// </summary>
-        public LineRenderer LineRenderer { get { return lineRenderer; } }
+        public LineRenderer LineRenderer
+        {
+            get { return lineRenderer; }
+        }
 
         /// <summary>
         /// The current line start point (point index 0)

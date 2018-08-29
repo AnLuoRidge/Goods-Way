@@ -5,7 +5,7 @@ using Utils;
 
 public class PathManager : Singleton<PathManager>
 {
-    private string[] path1 = {"ImageTarget1", "ImageTarget2", "ImageTarget4"};
+    private string[] path1 = {"ImageTarget1", "ImageTarget2", "ImageTarget3", "ImageTarget4"};
     private string[] path2 = {"ImageTarget1", "ImageTarget3"};
     public string[] CurrentPath;
 

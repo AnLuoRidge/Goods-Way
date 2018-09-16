@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 using UnityEngine;
 using Utils;
 
 public class PathManager : Singleton<PathManager>
 {
-    private string[] path1 = {"ImageTarget1", "ImageTarget2", "ImageTarget3", "ImageTarget4"};
-    private string[] path2 = {"ImageTarget1", "ImageTarget3"};
+    public static string[] path1 = {"ImageTarget1", "ImageTarget2", "ImageTarget3", "ImageTarget4"};
+    public static string[] path2 = {"ImageTarget1", "ImageTarget3"};
+    public static string[] path3 = {"ImageTarget1", "ImageTarget2"};
+    public static string[] path4 = {"ImageTarget2", "ImageTarget4"};
     public string[] CurrentPath;
 
     protected override void Awake()
@@ -15,19 +18,32 @@ public class PathManager : Singleton<PathManager>
         CurrentPath = path1;
     }
 
-    private void OnGUI()
-    {
-        if (GUI.Button(new Rect(10, 10, 50, 50), "Path 1"))
-        {
-            CurrentPath = path1;
-            Debug.Log("Show Path 1");
-        }
+//    private void OnGUI()
+//    {
+//        if (GUI.Button(new Rect(10, 10, 50, 50), "Path 1"))
+//        {
+//            CurrentPath = path1;
+//            Debug.Log("Show Path 1");
+//        }
+//
+//        if (GUI.Button(new Rect(10, 70, 50, 50), "Path 2"))
+//        {
+//            CurrentPath = path2;
+//            Debug.Log("Show Path 2");
+//        }
+//    }
 
-        if (GUI.Button(new Rect(10, 70, 50, 50), "Path 2"))
+    public void SetPath(string[] path)
+    {
+        CurrentPath = path;
+        StringBuilder sb = new StringBuilder();
+        sb.Append(path[0]);
+        if (path.Length <= 1) return;
+        for (int i = 1; i < path.Length; i++)
         {
-            CurrentPath = path2;
-            Debug.Log("Show Path 2");
+            sb.Append(" -> " + path[i]);
         }
+        Debug.Log("Show Path: " + sb); 
     }
 
     /// <summary>

@@ -250,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 1571201360428658}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 77.7}
-  m_LocalScale: {x: 8.636364, y: 8.636364, z: 8.636364}
+  m_LocalScale: {x: 0.12065, y: 0.12065, z: 0.12065}
   m_Children:
   - {fileID: 4499653099018660}
   m_Father: {fileID: 0}
@@ -500,14 +500,14 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: target_oxygen
+  mTrackableName: Oxygen
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/iOS.xml
+  mDataSetPath: Vuforia/VuforiaMars_Images.xml
   mAspectRatio: 1.7272727
   mImageTargetType: 0
-  mWidth: 5
-  mHeight: 8.636364
+  mWidth: 0.06985
+  mHeight: 0.12065
 --- !u!114 &114955724456309144
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -721,7 +721,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 'AstronautMaterial
+  m_Name: 'MarsBox.LeftMaterial
 
     -17924'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
@@ -948,20 +948,20 @@ Prefab:
       objectReference: {fileID: 1871262245}
     - target: {fileID: 4406165283842532, guid: a4b96757cffd14342b9f6c1af31b2083, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.12065
+      value: 0.1016
       objectReference: {fileID: 0}
     - target: {fileID: 4406165283842532, guid: a4b96757cffd14342b9f6c1af31b2083, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.12065
+      value: 0.1016
       objectReference: {fileID: 0}
     - target: {fileID: 4406165283842532, guid: a4b96757cffd14342b9f6c1af31b2083, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.12065
+      value: 0.1016
       objectReference: {fileID: 0}
     - target: {fileID: 114246199902424578, guid: a4b96757cffd14342b9f6c1af31b2083,
         type: 2}
       propertyPath: mTrackableName
-      value: Astronaut
+      value: MarsBox.Left
       objectReference: {fileID: 0}
     - target: {fileID: 114246199902424578, guid: a4b96757cffd14342b9f6c1af31b2083,
         type: 2}
@@ -971,17 +971,17 @@ Prefab:
     - target: {fileID: 114246199902424578, guid: a4b96757cffd14342b9f6c1af31b2083,
         type: 2}
       propertyPath: mAspectRatio
-      value: 1.7272727
+      value: 2.6666665
       objectReference: {fileID: 0}
     - target: {fileID: 114246199902424578, guid: a4b96757cffd14342b9f6c1af31b2083,
         type: 2}
       propertyPath: mWidth
-      value: 0.06985
+      value: 0.0381
       objectReference: {fileID: 0}
     - target: {fileID: 114246199902424578, guid: a4b96757cffd14342b9f6c1af31b2083,
         type: 2}
       propertyPath: mHeight
-      value: 0.12065
+      value: 0.1016
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4b96757cffd14342b9f6c1af31b2083, type: 2}
@@ -992,7 +992,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 'DroneMaterial
+  m_Name: 'MarsBox.RightMaterial
 
     -16196'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
@@ -1019,7 +1019,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 'OxygenMaterial
+  m_Name: 'MarsBox.TopMaterial
 
     -18666'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
@@ -1116,6 +1116,38 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1472581348}
+    - target: {fileID: 114674088353498924, guid: 5b51c8bfb75f844d9ba390b5d0cfe027,
+        type: 2}
+      propertyPath: mTrackableName
+      value: MarsBox.Top
+      objectReference: {fileID: 0}
+    - target: {fileID: 114674088353498924, guid: 5b51c8bfb75f844d9ba390b5d0cfe027,
+        type: 2}
+      propertyPath: mAspectRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114674088353498924, guid: 5b51c8bfb75f844d9ba390b5d0cfe027,
+        type: 2}
+      propertyPath: mWidth
+      value: 0.0762
+      objectReference: {fileID: 0}
+    - target: {fileID: 114674088353498924, guid: 5b51c8bfb75f844d9ba390b5d0cfe027,
+        type: 2}
+      propertyPath: mHeight
+      value: 0.0381
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997703653379074, guid: 5b51c8bfb75f844d9ba390b5d0cfe027, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.0762
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997703653379074, guid: 5b51c8bfb75f844d9ba390b5d0cfe027, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.0762
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997703653379074, guid: 5b51c8bfb75f844d9ba390b5d0cfe027, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.0762
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b51c8bfb75f844d9ba390b5d0cfe027, type: 2}
   m_IsPrefabAsset: 0
@@ -1195,6 +1227,38 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1486436042}
+    - target: {fileID: 4399763002171690, guid: 844d972c0c07a44758da515967a226d5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.0762
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399763002171690, guid: 844d972c0c07a44758da515967a226d5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.0762
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399763002171690, guid: 844d972c0c07a44758da515967a226d5, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.0762
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250307252480884, guid: 844d972c0c07a44758da515967a226d5,
+        type: 2}
+      propertyPath: mTrackableName
+      value: MarsBox.Bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250307252480884, guid: 844d972c0c07a44758da515967a226d5,
+        type: 2}
+      propertyPath: mAspectRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250307252480884, guid: 844d972c0c07a44758da515967a226d5,
+        type: 2}
+      propertyPath: mWidth
+      value: 0.0762
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250307252480884, guid: 844d972c0c07a44758da515967a226d5,
+        type: 2}
+      propertyPath: mHeight
+      value: 0.0381
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 844d972c0c07a44758da515967a226d5, type: 2}
   m_IsPrefabAsset: 0
@@ -1729,7 +1793,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.28947368, y: 0, z: 0.5}
+      m_Extent: {x: 0.5, y: 0, z: 0.25}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1805,7 +1869,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: e53594be00000000000000bf000000000000803f000000000000000000000000e53594be000000000000003f000000000000803f00000000000000000000803fe535943e00000000000000bf000000000000803f000000000000803f00000000e535943e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf00000000000080be000000000000803f000000000000000000000000000000bf000000000000803e000000000000803f00000000000000000000803f0000003f00000000000080be000000000000803f000000000000803f000000000000003f000000000000803e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1884,7 +1948,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.28947368, y: 0, z: 0.5}
+      m_Extent: {x: 0.5, y: 0, z: 0.25}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1960,7 +2024,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: e53594be00000000000000bf000000000000803f000000000000000000000000e53594be000000000000003f000000000000803f00000000000000000000803fe535943e00000000000000bf000000000000803f000000000000803f00000000e535943e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf00000000000080be000000000000803f000000000000000000000000000000bf000000000000803e000000000000803f00000000000000000000803f0000003f00000000000080be000000000000803f000000000000803f000000000000003f000000000000803e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2028,7 +2092,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 'FissureMaterial
+  m_Name: 'MarsBox.BottomMaterial
 
     -17236'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
@@ -2350,7 +2414,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.28947368, y: 0, z: 0.5}
+      m_Extent: {x: 0.18750001, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -2426,7 +2490,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: e53594be00000000000000bf000000000000803f000000000000000000000000e53594be000000000000003f000000000000803f00000000000000000000803fe535943e00000000000000bf000000000000803f000000000000803f00000000e535943e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 010040be00000000000000bf000000000000803f000000000000000000000000010040be000000000000003f000000000000803f00000000000000000000803f0100403e00000000000000bf000000000000803f000000000000803f000000000100403e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2505,7 +2569,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.28947368, y: 0, z: 0.5}
+      m_Extent: {x: 0.18750001, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -2581,7 +2645,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: e53594be00000000000000bf000000000000803f000000000000000000000000e53594be000000000000003f000000000000803f00000000000000000000803fe535943e00000000000000bf000000000000803f000000000000803f00000000e535943e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 010040be00000000000000bf000000000000803f000000000000000000000000010040be000000000000003f000000000000803f00000000000000000000803f0100403e00000000000000bf000000000000803f000000000000803f000000000100403e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2874,6 +2938,38 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1688802747}
+    - target: {fileID: 114311211715151368, guid: ef7ed9e7797f64aa3ab29513b7e0d349,
+        type: 2}
+      propertyPath: mTrackableName
+      value: MarsBox.Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 114311211715151368, guid: ef7ed9e7797f64aa3ab29513b7e0d349,
+        type: 2}
+      propertyPath: mAspectRatio
+      value: 2.6666665
+      objectReference: {fileID: 0}
+    - target: {fileID: 114311211715151368, guid: ef7ed9e7797f64aa3ab29513b7e0d349,
+        type: 2}
+      propertyPath: mWidth
+      value: 0.0381
+      objectReference: {fileID: 0}
+    - target: {fileID: 114311211715151368, guid: ef7ed9e7797f64aa3ab29513b7e0d349,
+        type: 2}
+      propertyPath: mHeight
+      value: 0.1016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792188981697408, guid: ef7ed9e7797f64aa3ab29513b7e0d349, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.1016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792188981697408, guid: ef7ed9e7797f64aa3ab29513b7e0d349, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.1016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792188981697408, guid: ef7ed9e7797f64aa3ab29513b7e0d349, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.1016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef7ed9e7797f64aa3ab29513b7e0d349, type: 2}
   m_IsPrefabAsset: 0

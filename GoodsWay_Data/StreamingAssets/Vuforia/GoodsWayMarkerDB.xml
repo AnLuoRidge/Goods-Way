@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="MarsBox_Bottom" size="60.000000 30.000000" />
+    <ImageTarget name="MarsBox_Top" size="30.000000 15.000000" />
+    <ImageTarget name="MarsBox_Right" size="30.000000 80.000000" />
+    <ImageTarget name="MarsBox_Left" size="30.000000 80.000000" />
+    <ImageTarget name="MarsBox_Back" size="60.000000 80.000000" />
+    <ImageTarget name="qr_1" size="5.000000 6.646884" />
+    <ImageTarget name="target_drone" size="5.000000 8.636364" />
+    <ImageTarget name="target_fissure" size="5.000000 8.636364" />
+    <ImageTarget name="target_astronaut" size="5.000000 8.636364" />
+    <ImageTarget name="target_oxygen" size="5.000000 8.636364" />
+    <ImageTarget name="target_MarsBox_Front" size="5.000000 6.666667" />
+    <ImageTarget name="target_gears" size="6.700000 11.917067" />
+    <ImageTarget name="target_boat" size="6.700000 6.700000" />
+  </Tracking>
+</QCARConfig>

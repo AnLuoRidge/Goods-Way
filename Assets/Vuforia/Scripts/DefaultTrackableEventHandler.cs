@@ -6,6 +6,7 @@ All Rights Reserved.
 Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
+using System.Collections;
 using UnityEngine;
 using Vuforia;
 
@@ -17,6 +18,11 @@ using Vuforia;
 /// </summary>
 public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 {
+    public bool WasTracked = false;
+    public CreateFootstep canvas ;
+    public int RegisterNumber = 1;
+    public bool WasRegisted = false;
+
     #region PROTECTED_MEMBER_VARIABLES
 
     protected TrackableBehaviour mTrackableBehaviour;
@@ -27,9 +33,20 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void Start()
     {
+        canvas = GameObject.Find("Canvas").GetComponent<CreateFootstep>();
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
+    }
+
+    void Update()
+    {
+        if (WasTracked && WasRegisted) {
+            //Debug.Log(this.transform.position);
+            //canvas.CreateFeetstep(this.transform);
+            canvas.UpdateImageTarget(this.transform, RegisterNumber);
+
+        }
     }
 
     protected virtual void OnDestroy()
@@ -56,6 +73,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
             OnTrackingFound();
+            RegisterImageTarget(this.transform);
         }
         else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
                  newStatus == TrackableBehaviour.Status.NO_POSE)
@@ -81,7 +99,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
-
+        Debug.Log(RegisterNumber);
         // Enable rendering:
         foreach (var component in rendererComponents)
             component.enabled = true;
@@ -95,13 +113,17 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             component.enabled = true;
     }
 
+    private void RegisterImageTarget(Transform transform)
+    {
+        WasTracked = true;
+        canvas.RegisterImageTarget(transform, RegisterNumber);
+    }
 
     protected virtual void OnTrackingLost()
     {
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
-
         // Disable rendering:
         foreach (var component in rendererComponents)
             component.enabled = false;
@@ -113,6 +135,18 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Disable canvas':
         foreach (var component in canvasComponents)
             component.enabled = false;
+        if (WasTracked)
+        {
+            StartCoroutine(delayDestory());
+            WasTracked = false;
+        }
+
+    }
+    IEnumerator delayDestory()
+    {
+        yield return new WaitForSeconds(1f);
+        canvas.DeRegisterImageTarget(RegisterNumber);
+        canvas.InnerCount = 0;
     }
 
     #endregion // PROTECTED_METHODS

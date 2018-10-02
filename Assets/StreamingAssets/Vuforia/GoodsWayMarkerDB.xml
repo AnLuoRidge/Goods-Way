@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="MarsBox_Bottom" size="60.000000 30.000000" />
+    <ImageTarget name="target_coca" size="0.100000 0.100000" />
+    <ImageTarget name="target_mouse" size="0.100000 0.100000" />
+    <ImageTarget name="target_hat" size="0.100000 0.100000" />
+    <ImageTarget name="target_tide" size="0.100000 0.100000" />
+    <ImageTarget name="MarsVuMark_5" size="0.100000 0.172727" />
+    <ImageTarget name="MarsVuMark_4" size="0.100000 0.172727" />
+    <ImageTarget name="MarsVuMark_3" size="0.100000 0.172727" />
+    <ImageTarget name="MarsVuMark_2" size="0.100000 0.172727" />
+    <ImageTarget name="MarsVuMark_1" size="0.100000 0.172727" />
     <ImageTarget name="MarsBox_Top" size="30.000000 15.000000" />
+    <ImageTarget name="MarsBox_Bottom" size="60.000000 30.000000" />
     <ImageTarget name="MarsBox_Right" size="30.000000 80.000000" />
     <ImageTarget name="MarsBox_Left" size="30.000000 80.000000" />
     <ImageTarget name="MarsBox_Back" size="60.000000 80.000000" />

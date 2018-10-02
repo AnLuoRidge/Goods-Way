@@ -31,6 +31,6 @@ public class ImageTargetProperty : DefaultTrackableEventHandler
     public void DrawLine(Vector3 position)
     {
         phasorScript.Source = gameObject;
-        phasorScript.Fire(position);
+        // phasorScript.Fire(position);
     }
 }

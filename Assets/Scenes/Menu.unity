@@ -749,6 +749,16 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114578028292450828, guid: c0deef8db0f7c5744b2377488fa2fe79,
+        type: 2}
+      propertyPath: m_Text
+      value: Coca-Cola
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437227559715108, guid: c0deef8db0f7c5744b2377488fa2fe79,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 33.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0deef8db0f7c5744b2377488fa2fe79, type: 2}
   m_IsPrefabAsset: 0
@@ -1001,7 +1011,7 @@ Prefab:
     - target: {fileID: 114578028292450828, guid: c0deef8db0f7c5744b2377488fa2fe79,
         type: 2}
       propertyPath: m_Text
-      value: Tide
+      value: Tide Powder
       objectReference: {fileID: 0}
     - target: {fileID: 114914623437287920, guid: c0deef8db0f7c5744b2377488fa2fe79,
         type: 2}
@@ -1027,6 +1037,21 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114578028292450828, guid: c0deef8db0f7c5744b2377488fa2fe79,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114578028292450828, guid: c0deef8db0f7c5744b2377488fa2fe79,
+        type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437227559715108, guid: c0deef8db0f7c5744b2377488fa2fe79,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 37.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0deef8db0f7c5744b2377488fa2fe79, type: 2}
@@ -1465,7 +1490,7 @@ Prefab:
     - target: {fileID: 114578028292450828, guid: c0deef8db0f7c5744b2377488fa2fe79,
         type: 2}
       propertyPath: m_Text
-      value: Hat
+      value: Baseball Cap
       objectReference: {fileID: 0}
     - target: {fileID: 114179130357879730, guid: c0deef8db0f7c5744b2377488fa2fe79,
         type: 2}
@@ -1506,6 +1531,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224437227559715108, guid: c0deef8db0f7c5744b2377488fa2fe79,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 41.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0deef8db0f7c5744b2377488fa2fe79, type: 2}
@@ -2363,12 +2393,12 @@ Prefab:
     - target: {fileID: 114578028292450828, guid: c0deef8db0f7c5744b2377488fa2fe79,
         type: 2}
       propertyPath: m_Text
-      value: Mouse
+      value: Magic Mouse 2
       objectReference: {fileID: 0}
     - target: {fileID: 224437227559715108, guid: c0deef8db0f7c5744b2377488fa2fe79,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 21.5
+      value: 46.5
       objectReference: {fileID: 0}
     - target: {fileID: 114914623437287920, guid: c0deef8db0f7c5744b2377488fa2fe79,
         type: 2}

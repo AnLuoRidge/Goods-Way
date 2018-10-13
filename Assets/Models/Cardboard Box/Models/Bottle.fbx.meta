@@ -2,7 +2,40 @@ fileFormatVersion: 2
 guid: 3ddfb23040049479b87d6da77e9b480b
 ModelImporter:
   serializedVersion: 23
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: bottle
+    100004: Cinema4D_Editor
+    100006: Gatorade__MANGO
+    100008: Light
+    100010: Light_2
+    100012: Light_3
+    100014: Metaball
+    100016: water_drops
+    400000: //RootNode
+    400002: bottle
+    400004: Cinema4D_Editor
+    400006: Gatorade__MANGO
+    400008: Light
+    400010: Light_2
+    400012: Light_3
+    400014: Metaball
+    400016: water_drops
+    2100000: Drops
+    2100002: lid
+    2100004: Mango
+    2100006: mango
+    2300000: bottle
+    2300002: Metaball
+    3300000: bottle
+    3300002: Metaball
+    4300000: Metaball
+    4300002: bottle
+    9500000: //RootNode
+    10800000: Light
+    10800002: Light_2
+    10800004: Light_3
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -54,8 +87,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

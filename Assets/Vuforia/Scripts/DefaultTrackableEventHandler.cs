@@ -99,7 +99,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
-        Debug.Log(RegisterNumber);
+//        Debug.Log(RegisterNumber);
         // Enable rendering:
         foreach (var component in rendererComponents)
             component.enabled = true;

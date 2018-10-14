@@ -16,7 +16,7 @@ public class PathData : MonoBehaviour {
             case 4:
                 return new int[4] { 1, 2, 3, 5 };
             default:
-                return new int[5] { 1, 2, 3, 4, 5 };
+                return new int[9] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         }
     }
 }

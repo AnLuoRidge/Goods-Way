@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="target_coca" size="0.100000 0.100000" />
-    <ImageTarget name="target_mouse" size="0.100000 0.100000" />
-    <ImageTarget name="target_hat" size="0.100000 0.100000" />
-    <ImageTarget name="target_tide" size="0.100000 0.100000" />
+    <ImageTarget name="MarsVuMark_9" size="0.100000 0.172727" />
+    <ImageTarget name="MarsVuMark_8" size="0.100000 0.172727" />
+    <ImageTarget name="MarsVuMark_7" size="0.100000 0.172727" />
+    <ImageTarget name="MarsVuMark_6" size="0.100000 0.172727" />
     <ImageTarget name="MarsVuMark_5" size="0.100000 0.172727" />
     <ImageTarget name="MarsVuMark_4" size="0.100000 0.172727" />
     <ImageTarget name="MarsVuMark_3" size="0.100000 0.172727" />

@@ -137,7 +137,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             component.enabled = false;
         if (WasTracked)
         {
-            StartCoroutine(delayDestory());
+            canvas.DeRegisterImageTarget(RegisterNumber);
+            canvas.InnerCount = 0;
+            //StartCoroutine(delayDestory());
             WasTracked = false;
         }
 

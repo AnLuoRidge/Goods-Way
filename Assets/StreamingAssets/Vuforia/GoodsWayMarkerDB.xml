@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="ar_marker_16" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_15" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_14" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_13" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_12" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_11" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_10" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_9" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_8" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_7" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_6" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_5" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_4" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_3" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_2" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_17" size="0.200000 0.200000" />
+    <ImageTarget name="ar_marker_1" size="0.200000 0.200000" />
     <ImageTarget name="MarsVuMark_9" size="0.100000 0.172727" />
     <ImageTarget name="MarsVuMark_8" size="0.100000 0.172727" />
     <ImageTarget name="MarsVuMark_7" size="0.100000 0.172727" />

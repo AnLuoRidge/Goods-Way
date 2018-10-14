@@ -13,6 +13,8 @@ public class CreateFootstep : MonoBehaviour {
     [SerializeField] private GameObject Navigator;
     [SerializeField] private Camera ARcamera;
     [SerializeField] private Dropdown m_Dropdown;
+
+    [SerializeField] private GameObject FinalText;
     private bool ani = true;
     public int InnerCount = 0;
     private int InnerStep = 0;
@@ -64,6 +66,10 @@ public class CreateFootstep : MonoBehaviour {
                 }   
             } 
         }
+        if(RegisteredImageTargets[RegisteredImageTargets.Count-1].Index.Equals(Path[Path.Length-1]) && !FinalText.activeSelf){
+            FinalText.SetActive(true); 
+            StartCoroutine("textDestory");           
+        }
     }
 
     public void RegisterImageTarget(Transform transform, int index)
@@ -106,7 +112,11 @@ public class CreateFootstep : MonoBehaviour {
                 return Icon;
         }
     }
-
+    IEnumerator textDestory()
+    {
+        yield return new WaitForSeconds(2f);
+        FinalText.SetActive(false);
+    }
 }
 
 public class RegisteredImageTarget
@@ -115,6 +125,5 @@ public class RegisteredImageTarget
 
     public Transform Imagetarget { get; set; }
 }
-
 
 

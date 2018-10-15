@@ -66,9 +66,12 @@ public class CreateFootstep : MonoBehaviour {
                 }   
             } 
         }
-        if(RegisteredImageTargets[RegisteredImageTargets.Count-1].Index.Equals(Path[Path.Length-1]) && !FinalText.activeSelf){
+        if (RegisteredImageTargets.Count > 0)
+        {
+            if(RegisteredImageTargets[RegisteredImageTargets.Count-1].Index.Equals(Path[Path.Length-1]) && !FinalText.activeSelf){
             FinalText.SetActive(true); 
             StartCoroutine("textDestory");           
+            }
         }
     }
 
